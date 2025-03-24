@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviews</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Reviews</h1>
+        <form id="reviewForm"> 
+            <input type="text" id="user" placeholder="Your Name" required />
+            <input type="number" id="rating" min="1" max="5" placeholder="Rating (1-5)" required />
+            <textarea id="comment" placeholder="Write a review..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="main">
+        <h2>All Reviews</h2>
+        <div id="reviews"></div>  <!-- ✅ Changed from h1 to div for proper styling -->
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Movie Reviews</p> 
+    </div>
+
+    <script src="review.js"></script>
+</body>
+</html>

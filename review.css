@@ -1,0 +1,182 @@
+/* 🌟 General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🌟 Main Container */
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: linear-gradient(135deg, #1f1f1f, #292929);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00ffc8;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 2px solid #00ffc8;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 🌟 Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #bbb;
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 🌟 Submit Button */
+button {
+    background: #00ffc8;
+    color: #121212;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00cc99;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 🌟 Review Section */
+.main {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, #1a1a1a, #222);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
+}
+
+#reviews {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Review Box */
+.review {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.review:hover {
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3);
+}
+
+.review strong {
+    color: #00ffc8;
+    font-size: 18px;
+}
+
+.review span {
+    font-size: 14px;
+    color: #aaa;
+    margin-left: 10px;
+}
+
+.review p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* 🌟 Message Styles */
+.no-reviews {
+    text-align: center;
+    font-style: italic;
+    color: #bbb;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* 🌟 Footer */
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: #1f1f1f;
+    color: #00ffc8;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 600px) {
+    .container, .main {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
