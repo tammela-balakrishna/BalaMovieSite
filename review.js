@@ -15,7 +15,7 @@ document.getElementById("reviewForm").addEventListener("submit", async function 
     }
 
     try {
-        const response = await fetch("http://localhost:5000/reviews", {
+        const response = await fetch("https://balamoviereview-backend.onrender.com/reviews", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ movieId, user, rating, comment })
@@ -36,7 +36,7 @@ document.getElementById("reviewForm").addEventListener("submit", async function 
 // 🔹 Fetch and Display Reviews
 async function fetchReviews() {
     try {
-        const response = await fetch(`http://localhost:5000/reviews/${movieId}`);
+        const response = await fetch(`https://balamoviereview-backend.onrender.com/reviews/${movieId}`);
         const reviews = await response.json();
 
         let reviewSection = document.getElementById("reviews");
