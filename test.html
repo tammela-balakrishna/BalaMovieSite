@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bala Movies Site - Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <form class="form" id="form">
+                <h1>Movie Site</h1>
+                <input class="searchbar" id="searchbar" type="text" placeholder="Search.." autocomplete="off">
+            </form>
+        </div>
+
+        <div class="row" id="main">
+            <!-- Movie cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+  <script>
+    // Mock data for testing
+    const mockMovies = [
+      {
+        id: 1,
+        title: "Test Movie 1",
+        poster_path: null
+      },
+      {
+        id: 2,
+        title: "Test Movie 2",
+        poster_path: null
+      }
+    ];
+
+    const main = document.getElementById('main');
+    
+    // Display mock movies
+    mockMovies.forEach((movie) => {
+      const movieCard = document.createElement("div");
+      movieCard.classList.add("movieCard");
+
+      const image = document.createElement("img");
+      image.src = movie.poster_path ? "https://image.tmdb.org/t/p/w1280" + movie.poster_path : "https://via.placeholder.com/200x300?text=No+Image";
+      image.alt = movie.title;
+
+      const movieTitle = document.createElement("h2");
+      movieTitle.innerHTML = movie.title;
+
+      const reviewBtn = document.createElement("button");
+      reviewBtn.innerText = "Review";
+      reviewBtn.addEventListener("click", () => {
+        window.location.href = `review.html?movieId=${movie.id}`;
+      });
+
+      movieCard.appendChild(image);
+      movieCard.appendChild(movieTitle);
+      movieCard.appendChild(reviewBtn);
+      main.appendChild(movieCard);
+    });
+  </script>
+</body>
+</html>
